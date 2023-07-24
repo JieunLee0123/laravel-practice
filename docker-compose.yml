@@ -1,0 +1,8 @@
+version: "3"
+services:
+  laravel-practice:
+    image: laravel-practice
+    ports:
+      - "8100:8000"
+    volumes:
+      - ".:/var/www/html"
