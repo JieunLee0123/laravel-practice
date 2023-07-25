@@ -1,8 +1,13 @@
-version: "3"
+version: '3.8'
+
 services:
-  laravel-practice:
+  app:
+    build: .
     image: laravel-practice
+    container_name: laravel-practice
+    restart: unless-stopped
     ports:
-      - "8100:8000"
-    volumes:
-      - ".:/var/www/html"
+      - "8080:80"
+    environment:
+      - APP_ENV=local
+      - APP_DEBUG=true

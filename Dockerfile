@@ -1,16 +1,32 @@
-FROM php:8.2-alpine
+FROM composer:2 AS composer
 
-RUN apk update
-RUN apk add bash
-RUN apk add curl
+RUN composer create-project --prefer-dist laravel/laravel /app
 
-RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
- php -r "if (hash_file('sha384', 'composer-setup.php') === 'e21205b207c3ff031906575712edab6f13eb0b361f2085f1f1237b7126d785e826a450292b6cfd1d64d92e6563bbde02') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;" \ php composer-setup.php \ php -r "unlink('composer-setup.php');"
+FROM php:8.1-apache
 
-RUN php composer-setup.php --install-dir=bin --filename=composer
+COPY --from=composer /app /var/www/html/
+COPY --from=composer /usr/bin/composer /usr/bin/composer
 
-WORKDIR /var/www/html
+RUN apt-get update && \
+    apt-get install -y \
+    zip \
+    unzip \
+    git \
+    libpq-dev \
+    && docker-php-ext-install \
+    pdo_mysql \
+    && docker-php-ext-enable \
+    pdo_mysql
 
-RUN composer create-project laravel/laravel .
+RUN chown -R www-data:www-data /var/www/html/storage \
+    && chown -R www-data:www-data /var/www/html/bootstrap/cache
 
-CMD php artisan serve --host=0.0.0.0 --port=8000
+RUN a2enmod rewrite && \
+    sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+
+RUN composer dump-autoload --optimize \
+    && php artisan optimize
+
+EXPOSE 80
+
+CMD ["apache2-foreground"]
