@@ -17,5 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/fortune', \App\Livewire\Cookie::class);
+Route::get('/waffle', \App\Livewire\Cookie::class);
 

@@ -13,3 +13,7 @@ services:
       - APP_DEBUG=true
     volumes:
       - ".:/var/www/html"  
+    extra_hosts:
+      - host.docker.internal:host-gateway
+
+      

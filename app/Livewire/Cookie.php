@@ -24,7 +24,7 @@ class Cookie extends Component
         // $this->waffle = Arr::random($this->waffles);
 
         $key = array_rand($this->waffles);  
-
+   
         if ($key !== $this->currentIndex) {  
             $this->currentIndex = $key;  
             $this->waffle = $this->waffles[$key];  
@@ -40,6 +40,7 @@ class Cookie extends Component
 
     public function render()
     {
+        // echo xdebug_info();
         return view('livewire.cookie');  
     }  
 }

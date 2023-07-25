@@ -7,6 +7,11 @@ FROM php:8.1-apache
 COPY --from=composer /app /var/www/html/
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 
+RUN pecl install xdebug \
+  && docker-php-ext-enable xdebug
+
+COPY ./php.ini /usr/local/etc/php/
+
 RUN apt-get update && \
     apt-get install -y \
     zip \
