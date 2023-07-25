@@ -13,7 +13,7 @@ class Cookie extends Component
         '요거트아이스크림 와플',  
         '바나나누텔라땅콩크림 와플',  
     ];
-    
+
     public string $waffle;
 
     /** @locked  */  
@@ -23,11 +23,11 @@ class Cookie extends Component
     {
         // $this->waffle = Arr::random($this->waffles);
 
-        $key = array_rand($this->messages);  
+        $key = array_rand($this->waffles);  
 
         if ($key !== $this->currentIndex) {  
             $this->currentIndex = $key;  
-            $this->message = $this->messages[$key];  
+            $this->waffle = $this->waffles[$key];  
         } else {  
             $this->rotate();  
         }  

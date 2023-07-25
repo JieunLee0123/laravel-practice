@@ -15,4 +15,6 @@
 
 ## 3. 참고링크
 [How to setup Laravel in Docker?](https://www.golinuxcloud.com/setup-laravel-in-docker/#Installing_Docker_on_Windows)<br/>
-[Laravel Livewire V3 – Getting Started](https://ajaxray.com/blog/laravel-livewire-v3-getting-started/)
+[Upcoming Livewire v3 Features and Changes](https://laravel-news.com/livewire-v3-features)<br/>
+[Laravel Livewire V3 – Getting Started](https://ajaxray.com/blog/laravel-livewire-v3-getting-started/)<br/>
+[( VSCode+Docker ) PHP Xdebug](https://jacking75.github.io/docker_php/)
