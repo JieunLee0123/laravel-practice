@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MovieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,4 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/waffle', \App\Livewire\Cookie::class);
+
+Route::get('/movie', [MovieController::class, 'movie'])->name('movie');
 
