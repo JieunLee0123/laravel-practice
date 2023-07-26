@@ -20,5 +20,8 @@ Route::get('/', function () {
 
 Route::get('/waffle', \App\Livewire\Cookie::class);
 
-Route::get('/movie', [MovieController::class, 'movie'])->name('movie');
+Route::get('/movie', [MovieController::class, 'getMovie'])->name('movie');
+
+Route::get('/now-playing', [MovieController::class, 'getNowPlaying'])->name('now-playing');
+
 

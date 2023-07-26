@@ -30,4 +30,5 @@
 [Setup Xdebug WITH DOCKER and debug in VSCode](https://www.youtube.com/watch?v=it7JQKPfWTU)<br/><br/>
 
 [Working with TMDb API in Laravel 9](https://blog.devops.dev/working-with-tmdb-api-in-laravel-9-4b4c578b75e4)<br/>
+[GET Request Query Parameters](https://laravel.com/docs/10.x/http-client#get-request-query-parameters)<br/>
 
