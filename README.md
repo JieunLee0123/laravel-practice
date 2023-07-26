@@ -31,4 +31,5 @@
 
 [Working with TMDb API in Laravel 9](https://blog.devops.dev/working-with-tmdb-api-in-laravel-9-4b4c578b75e4)<br/>
 [GET Request Query Parameters](https://laravel.com/docs/10.x/http-client#get-request-query-parameters)<br/>
+[livewire3 Components](https://livewire.laravel.com/docs/components)<br/>
 
