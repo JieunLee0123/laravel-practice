@@ -17,16 +17,16 @@ class MovieController extends Controller
 
 	public array $genreArrReturn;
 
-	// movie
-    public function getMovie(){
-        $tmdb_id = 436270;
-		$movieData = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/'.$tmdb_id, [
-			'api_key' => API_KEY,
-		]);
+	// get movie detail
+    public function getDetail(){
+      $tmdb_id = 436270;
+      $movieData = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/'.$tmdb_id, [
+        'api_key' => API_KEY,
+      ]);
 
-		// echo $movieData;
-		return view('movie', compact('movieData'));
-	}
+      // echo $movieData;
+      return view('movie', compact('movieData'));
+    }
 
 	public function getGenre(int $id){ // id 입력시 장르 출력
 		// echo $id." ";
@@ -50,8 +50,8 @@ class MovieController extends Controller
 		}
 	}
 	
-	// now-playing
-	public function getNowPlaying(){
+	// get movie lists
+	public function getLists(){
 		$moviesResArr = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/now_playing', [
 			'api_key' => API_KEY,
 			'language' => 'ko',

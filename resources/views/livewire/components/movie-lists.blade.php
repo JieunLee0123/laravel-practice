@@ -3,7 +3,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;
+    -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
   }
 </style>
@@ -25,9 +25,9 @@
                     <p class="text-xs leading-3 text-gray-600  mr-4">#장르2</p>
                     <p class="text-xs leading-3 text-gray-600  mr-4">#장르3</p>
                 </div>
-                <button role="button" aria-label="Like" class="hover:bg-gray-100 focus:outline-none focus:ring-2  flex items-center p-1 border rounded-sm border-gray-200 cursor-pointer">
+                <button role="button" aria-label="Rate" class="hover:bg-gray-100 focus:outline-none focus:ring-2  flex items-center p-1 border rounded-sm border-gray-200 cursor-pointer">
                     <img src="https://tuk-cdn.s3.amazonaws.com/can-uploader/list-svg1.svg" alt="like" />
-                    <span class="text-xs leading-3 text-gray-600  pl-1">Like {{ $movieData['popularity'] }}</span>
+                    <span class="text-xs leading-3 text-gray-600  pl-1">Rate {{ $movieData['popularity'] }}</span>
                 </button>
             </div>
         </div>

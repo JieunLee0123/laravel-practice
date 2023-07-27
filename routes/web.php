@@ -14,14 +14,19 @@ use App\Http\Controllers\MovieController;
 |
 */
 
+// welcome
 Route::get('/', function () {
     return view('welcome');
 });
 
+// waffle
 Route::get('/waffle', \App\Livewire\Cookie::class);
 
-Route::get('/movie', [MovieController::class, 'getMovie'])->name('movie');
+// movie
+Route::name('movie.')->group(function () {
+  Route::get('/lists', [MovieController::class, 'getLists'])->name('lists');
+  Route::get('/detail', [MovieController::class, 'getDetail'])->name('detail');
+});
 
-Route::get('/now-playing', [MovieController::class, 'getNowPlaying'])->name('now-playing');
 
 
