@@ -6,7 +6,10 @@ use function Livewire\Volt\{action};
 state(['count' => 0]);
  
 // $increment = fn () => $this->count++;
-$increment = action(fn () => $this->count++)->renderless();
+// $increment = action(fn () => $this->count++)->renderless();
+$increment = function () {
+  echo 'not working';
+}
  
 ?>
  
