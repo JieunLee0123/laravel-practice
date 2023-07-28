@@ -22,6 +22,13 @@ Route::get('/', function () {
 // waffle
 Route::get('/waffle', \App\Livewire\Cookie::class);
 
+// volt-test
+Route::get('/volt', fn () => view('livewire.volt-test'));
+
+// component-test
+// Route::get('/component', fn () => view('livewire.component-test'));
+Route::get('/component', \App\Livewire\ComponentTest::class);
+
 // movie
 Route::name('movie.')->group(function () {
   Route::get('/lists', [MovieController::class, 'getLists'])->name('lists');
