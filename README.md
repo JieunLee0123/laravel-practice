@@ -1,5 +1,7 @@
 # Laravel Practice
 
+<br/>
+
 ## Set ( docker compose )
 1. Php v8.1
 2. Laravel v10.15.0
@@ -8,6 +10,15 @@
 <br/>
 
 ## Installation
+### lievewire3<br/>
+1. install livewire3<br/>
+composer require livewire/livewire:^3.0@beta<br/>
+
+### volt<br/>
+1. install volt<br/>
+composer require livewire/volt:^1.0@beta<br/>
+2. install Volt's service provider file<br/>
+php artisan volt:install<br/>
 
 <br/>
 
@@ -31,6 +42,11 @@
 
 <br/>
 
+## 트러블 슈팅
+1. object 는 component 로 pass 불가 => array 로 변경 후 전달 가능<br/>
+
+<br/>
+
 ## 참고링크
 [Docker]<br/>
 [How to setup Laravel in Docker?](https://www.golinuxcloud.com/setup-laravel-in-docker/#Installing_Docker_on_Windows)<br/>
@@ -39,6 +55,7 @@
 [Upcoming Livewire v3 Features and Changes](https://laravel-news.com/livewire-v3-features)<br/>
 [Laravel Livewire V3 – Getting Started](https://ajaxray.com/blog/laravel-livewire-v3-getting-started/)<br/>
 [livewire3 Components](https://livewire.laravel.com/docs/components)<br/>
+[Volt](https://livewire.laravel.com/docs/volt)<br/>
 
 [Xdebug]<br/>
 [Setup Xdebug WITH DOCKER and debug in VSCode](https://www.youtube.com/watch?v=it7JQKPfWTU)<br/>
@@ -46,5 +63,7 @@
 [API]<br/>
 [Working with TMDb API in Laravel 9](https://blog.devops.dev/working-with-tmdb-api-in-laravel-9-4b4c578b75e4)<br/>
 [GET Request Query Parameters](https://laravel.com/docs/10.x/http-client#get-request-query-parameters)<br/>
+
+
 
 

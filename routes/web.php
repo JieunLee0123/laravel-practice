@@ -25,7 +25,7 @@ Route::get('/waffle', \App\Livewire\Cookie::class);
 // movie
 Route::name('movie.')->group(function () {
   Route::get('/lists', [MovieController::class, 'getLists'])->name('lists');
-  Route::get('/detail', [MovieController::class, 'getDetail'])->name('detail');
+  Route::get('/detail/{movie_id}', [MovieController::class, 'getDetail'])->name('detail');
 });
 
 

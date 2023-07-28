@@ -8,6 +8,6 @@ class NowPlaying extends Component
 {
     public function render()
     {
-        return view('livewire.now-playing');
+        return view('livewire.movie-lists-page');
     }
 }

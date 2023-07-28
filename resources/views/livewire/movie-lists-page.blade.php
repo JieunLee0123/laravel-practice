@@ -6,8 +6,8 @@
         <livewire:title-navigation />
 
         <!-- movie lists loop -->
-        @foreach($moviesResArr as $movieData)
-          <livewire:movie-lists :movieData="$movieData" :tag="$tag" :wire:key="$loop->index"/>
+        @foreach($moviesResArr as $movieDataArr)
+          <livewire:movie-list-card :movieDataArr="$movieDataArr" :tag="$tag" :wire:key="$loop->index"/>
         @endforeach
     </div>
 </section>

@@ -15,41 +15,19 @@ class MovieController extends Controller
 		'accept' => 'application/json',
 	];
 
-	public array $genreArrReturn;
-
 	// get movie detail
-    public function getDetail(){
-      $tmdb_id = 436270;
-      $movieData = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/'.$tmdb_id, [
-        'api_key' => API_KEY,
-      ]);
+  public function getDetail(int $movie_id){
+    $movieDataObj = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/'.$movie_id, [
+      'api_key' => API_KEY,
+    ]);
 
-      // echo $movieData;
-      return view('movie', compact('movieData'));
-    }
+    $movieDataArr = (array) json_decode($movieDataObj);
 
-	public function getGenre(int $id){ // id 입력시 장르 출력
-		// echo $id." ";
-		$genresArr = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'genre/movie/list', [
-			'api_key' => API_KEY,
-			'language' => 'ko',
-		])['genres'];
+    // dump($movieDataArr['id']);
+    return view('livewire.movie-detail-page')
+    ->with(compact('movieDataArr'));
+  }
 
-		$genre = array_filter($genresArr, function ($var) use ($id) {
-			return ($var['id'] == $id);
-		})[0]['name'];
-
-		return $genre;
-	}
-
-	public function loopGetGenre(array $genreIdArr){
-		// $this->getGenre(99);
-		foreach($genreIdArr as $id){
-			$this->getGenre($id);
-			// echo $id." ";
-		}
-	}
-	
 	// get movie lists
 	public function getLists(){
 		$moviesResArr = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'movie/now_playing', [
@@ -59,26 +37,11 @@ class MovieController extends Controller
 			'region' => 'KR'	
 		])['results'];
 
-		// foreach($moviesResArr as $movieData){
-		// 	$genreIdArr = $movieData['genre_ids'];
-
-		// 	if(count($genreIdArr)) {
-		// 		echo json_encode($genreIdArr);
-		// 	}
-
-		// 	// $genreArrReturn $this->loopGetGenre($genreIdArr);
-		// }
-
-		// $genreIdArr = $moviesResArr[0]['genre_ids'];
-		// $genre = $this->loopGetGenre($genreIdArr);
-
 		$tag = "Now Playing";
-		
-		// echo json_encode($genre);
-		// echo json_encode($moviesResArr)
-		return view('livewire.now-playing')
+    
+    // dump($moviesResArr);
+		return view('livewire.movie-lists-page')
 		->with(compact('moviesResArr'))
 		->with(compact('tag'));
-		// ->with(compact('genre'));
 	}
 }
