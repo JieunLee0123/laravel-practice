@@ -2,7 +2,7 @@
 
 <br/>
 
-## Set ( docker compose )
+## Set 
 1. Php v8.1
 2. Laravel v10.15.0
 3. Livewire v3
@@ -10,6 +10,16 @@
 <br/>
 
 ## Installation
+### docker<br/>
+1. docker compose up<br/>
+docker-compose up -d<br/>
+2. permission<br/>
+chmod -R 777 storage/<br/>
+3. .env<br/>
+.env.example -> .env
+4. generate app key<br/>
+php artisan key:generate<br/>
+
 ### lievewire3<br/>
 1. install livewire3<br/>
 composer require livewire/livewire:^3.0@beta<br/>

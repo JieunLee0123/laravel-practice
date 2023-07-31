@@ -1038,16 +1038,16 @@
         },
         {
             "name": "laravel/folio",
-            "version": "v1.0.0-beta.1",
+            "version": "v1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/folio.git",
-                "reference": "f9c54884077b80ff866ae3b3d834e74b7cd8f52d"
+                "reference": "2e98990cc9ccf0a01bce731ced17e1f04b531586"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/folio/zipball/f9c54884077b80ff866ae3b3d834e74b7cd8f52d",
-                "reference": "f9c54884077b80ff866ae3b3d834e74b7cd8f52d",
+                "url": "https://api.github.com/repos/laravel/folio/zipball/2e98990cc9ccf0a01bce731ced17e1f04b531586",
+                "reference": "2e98990cc9ccf0a01bce731ced17e1f04b531586",
                 "shasum": ""
             },
             "require": {
@@ -1106,7 +1106,7 @@
                 "issues": "https://github.com/laravel/folio/issues",
                 "source": "https://github.com/laravel/folio"
             },
-            "time": "2023-07-25T14:28:23+00:00"
+            "time": "2023-07-31T07:48:50+00:00"
         },
         {
             "name": "laravel/framework",
@@ -1896,16 +1896,16 @@
         },
         {
             "name": "livewire/livewire",
-            "version": "v3.0.0-beta.4",
+            "version": "v3.0.0-beta.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/livewire.git",
-                "reference": "b57896e44397d7c5b1c42db64dba4c8382959357"
+                "reference": "249b52628d4285f2b1073eeedc3312b265774705"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/livewire/zipball/b57896e44397d7c5b1c42db64dba4c8382959357",
-                "reference": "b57896e44397d7c5b1c42db64dba4c8382959357",
+                "url": "https://api.github.com/repos/livewire/livewire/zipball/249b52628d4285f2b1073eeedc3312b265774705",
+                "reference": "249b52628d4285f2b1073eeedc3312b265774705",
                 "shasum": ""
             },
             "require": {
@@ -1957,7 +1957,7 @@
             "description": "A front-end framework for Laravel.",
             "support": {
                 "issues": "https://github.com/livewire/livewire/issues",
-                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.4"
+                "source": "https://github.com/livewire/livewire/tree/v3.0.0-beta.5"
             },
             "funding": [
                 {
@@ -1965,20 +1965,20 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-24T21:57:39+00:00"
+            "time": "2023-07-28T21:10:07+00:00"
         },
         {
             "name": "livewire/volt",
-            "version": "v1.0.0-beta.1",
+            "version": "v1.0.0-beta.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/livewire/volt.git",
-                "reference": "7679954f4d9f089ff30bb460feeb98c8f7b929cd"
+                "reference": "f110c31cc24c3cc4bf02cf0b1d76c154566c3de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/livewire/volt/zipball/7679954f4d9f089ff30bb460feeb98c8f7b929cd",
-                "reference": "7679954f4d9f089ff30bb460feeb98c8f7b929cd",
+                "url": "https://api.github.com/repos/livewire/volt/zipball/f110c31cc24c3cc4bf02cf0b1d76c154566c3de2",
+                "reference": "f110c31cc24c3cc4bf02cf0b1d76c154566c3de2",
                 "shasum": ""
             },
             "require": {
@@ -2037,7 +2037,7 @@
                 "issues": "https://github.com/livewire/volt/issues",
                 "source": "https://github.com/livewire/volt"
             },
-            "time": "2023-07-26T16:39:41+00:00"
+            "time": "2023-07-31T07:56:14+00:00"
         },
         {
             "name": "monolog/monolog",
