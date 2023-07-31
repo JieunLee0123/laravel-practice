@@ -69,6 +69,7 @@ php artisan livewire-charts:install<br/>
 [Laravel Livewire V3 – Getting Started](https://ajaxray.com/blog/laravel-livewire-v3-getting-started/)<br/>
 [livewire3 Components](https://livewire.laravel.com/docs/components)<br/>
 [Volt](https://livewire.laravel.com/docs/volt)<br/>
+[Charts in Livewire 3 & Volt & folio](https://nunomaduro.com/charts_in_livewire_3_and_volt)<br/>
 
 [Xdebug]<br/>
 [Setup Xdebug WITH DOCKER and debug in VSCode](https://www.youtube.com/watch?v=it7JQKPfWTU)<br/>
