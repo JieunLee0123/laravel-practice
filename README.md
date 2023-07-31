@@ -10,15 +10,18 @@
 <br/>
 
 ## Installation
-### docker<br/>
-1. docker compose up<br/>
-docker-compose up -d<br/>
-2. permission<br/>
-chmod -R 777 storage/<br/>
-3. .env<br/>
-.env.example -> .env
-4. generate app key<br/>
-php artisan key:generate<br/>
+### docker compose<br/>
+1. docker-compose up -d<br/>
+
+### permission<br/>
+1. chmod -R 777 storage/<br/>
+
+### env<br/>
+1. .env.example -> .env
+2. add TMDB_ENDPOINT / TMDB_APP_KEY to .env
+
+### generate app key<br/>
+1. php artisan key:generate<br/>
 
 ### lievewire3<br/>
 1. install livewire3<br/>
