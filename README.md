@@ -20,6 +20,18 @@ composer require livewire/volt:^1.0@beta<br/>
 2. install Volt's service provider file<br/>
 php artisan volt:install<br/>
 
+### folio<br/>
+1. install folio<br/>
+composer require laravel/folio:^1.0@beta<br/>
+2. install folio's service provider file<br/>
+php artisan folio:install<br/>
+
+### livewire-charts<br/>
+1. install livewire-charts<br/>
+composer require asantibanez/livewire-charts<br/>
+2. install livewire-charts's service provider file<br/>
+php artisan livewire-charts:install<br/>
+
 <br/>
 
 ## Practice Livewire3
