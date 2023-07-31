@@ -1,3 +1,5 @@
+<script src="https://cdn.tailwindcss.com"></script>
+
 <style>
   .ellipsis {
     overflow: hidden;

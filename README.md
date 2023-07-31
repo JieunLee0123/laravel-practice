@@ -55,8 +55,8 @@ php artisan livewire-charts:install<br/>
 <br/>
 
 ## 트러블 슈팅
-1. object 는 component 로 pass 불가 => array 로 변경 후 전달 가능<br/>
-2. volt - counter 동작 안함. 아마 바인딩이 안되는 것 같음.<br/>
+1. object 는 component 로 pass 불가 => array 로 변경 후 data 전달 가능<br/>
+2. volt - component 로써만 사용가능<br/>
 
 <br/>
 
