@@ -11,6 +11,8 @@
 </style>
 
 <div class="bg-white w-full shadow rounded-lg mt-3 p-6 cursor-pointer">
+<!-- @dump($movieDataArr) -->
+
   <a href="/detail/{{ $movieDataArr['id'] }}">
     <div class="md:flex items-center">
         <div class="w-[20%] bg-yellow-50 rounded flex flex-shrink-0 items-center justify-center">

@@ -8,13 +8,12 @@ use function Livewire\Volt\{action};
 state(['inputValue']);
 state(['movieSearchArr' => []]);
 state(['tag']);
-
-$header = [
+state(['header' => [
   'accept' => 'application/json',
-];
+]]);
 
 $getSearchMovieLists = function(){
-  $this->movieSearchArr = Http::withHeaders($header)->get(config('services.tmdb.endpoint').'search/movie', [
+  $this->movieSearchArr = Http::withHeaders($this->header)->get(config('services.tmdb.endpoint').'search/movie', [
     'api_key' => config('services.tmdb.api'),
     'query' => $this->inputValue,
   ])['results'];
@@ -35,6 +34,8 @@ $onChange = function(){
 ?>
 
 <section>
+  <script src="https://cdn.tailwindcss.com"></script>
+
   <!-- search box -->
   <form wire:submit.prevent="onSubmit">
       <input type="text" wire:model="inputValue" wire:change="onChange" />
@@ -42,12 +43,10 @@ $onChange = function(){
       <button>Submit</button>
   </form>
 
-  @dump($movieSearchArr)
-
   @foreach($movieSearchArr as $movieDataArr)
-    @dump($movieDataArr)
+  <div class="bg-white w-full shadow rounded-lg mt-3 p-6 cursor-pointer">
+  <!-- @dump($movieDataArr) -->
 
-    <div class="bg-white w-full shadow rounded-lg mt-3 p-6 cursor-pointer">
       <a href="/detail/{{ $movieDataArr['id'] }}">
         <div class="md:flex items-center">
             <div class="w-[20%] bg-yellow-50 rounded flex flex-shrink-0 items-center justify-center">
@@ -72,7 +71,7 @@ $onChange = function(){
                 </div>
             </div>
         </div>
-      </a>
-    </div>
+    </a>
+  </div>
   @endforeach
 </section>
