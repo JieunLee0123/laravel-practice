@@ -6,9 +6,6 @@ use Livewire\Component;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
 
-define('TMDB_ENDPOINT', config('services.tmdb.endpoint'));
-define('API_KEY', config('services.tmdb.api'));
-
 class MovieSearchComponent extends Component
 {
     /** @modelable */
@@ -22,8 +19,8 @@ class MovieSearchComponent extends Component
     ];
 
     public function getSearchMovieLists(){
-        $this->movieSearchArr = Http::withHeaders($this->header)->get(TMDB_ENDPOINT.'search/movie', [
-          'api_key' => API_KEY,
+        $this->movieSearchArr = Http::withHeaders($this->header)->get(config('services.tmdb.endpoint').'search/movie', [
+          'api_key' => config('services.tmdb.api'),
           'query' => $this->inputValue,
         ])['results'];
         

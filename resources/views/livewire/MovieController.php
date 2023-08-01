@@ -6,6 +6,9 @@ use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Client\Response;
 // use Illuminate\Http\Request;
 
+define('config('services.tmdb.endpoint')', config('services.tmdb.endpoint'));
+define('API_KEY', config('services.tmdb.api'));
+
 class MovieController extends Controller
 {
 	public array $header = [
@@ -15,7 +18,7 @@ class MovieController extends Controller
 	// get movie detail
   public function getDetail(int $movie_id){
     $movieDataObj = Http::withHeaders($this->header)->get(config('services.tmdb.endpoint').'movie/'.$movie_id, [
-      'api_key' => config('services.tmdb.api'),
+      'api_key' => API_KEY,
     ]);
 
     $movieDataArr = (array) json_decode($movieDataObj);
@@ -28,7 +31,7 @@ class MovieController extends Controller
 	// get movie lists
 	public function getLists(){
 		$moviesResArr = Http::withHeaders($this->header)->get(config('services.tmdb.endpoint').'movie/now_playing', [
-			'api_key' => config('services.tmdb.api'),
+			'api_key' => API_KEY,
 			'language' => 'ko',
 			'page' => 5,
 			'region' => 'KR'	

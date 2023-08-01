@@ -5,10 +5,10 @@
       <button>Submit</button>
   </form>
 
-  <!-- @dump($movieSearchArr) -->
+  @dump($movieSearchArr)
 
   @foreach($movieSearchArr as $movieDataArr)
-
+    @dump($movieDataArr)
     <div class="bg-white w-full shadow rounded-lg mt-3 p-6 cursor-pointer">
       <a href="/detail/{{ $movieDataArr['id'] }}">
         <div class="md:flex items-center">

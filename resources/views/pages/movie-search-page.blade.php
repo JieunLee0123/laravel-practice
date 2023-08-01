@@ -6,7 +6,7 @@
     <title>movie-search-page</title>
 </head>
 <body>
-    <livewire:movie-search-component />
+    <livewire:movie-search-volt />
 </body>
 </html>
 
