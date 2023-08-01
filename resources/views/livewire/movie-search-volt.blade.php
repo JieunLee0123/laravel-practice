@@ -11,29 +11,30 @@ define('API_KEY', config('services.tmdb.api'));
 $header = [
   'accept' => 'application/json',
 ];
-$query = 'love';
+$query = 'like';
 
 state(['tag' => $query]);
-state(['value']);
+state(['inputValue']);
 
 $movieSearchArr = Http::withHeaders($header)->get(TMDB_ENDPOINT.'search/movie', [
   'api_key' => API_KEY,
   'query' => $query,
 ])['results'];
 
-
 state(['movieSearchArr' => fn () => $movieSearchArr]);
 
+$submit = function () {
+  var_dump($this->inputValue);
+}
 
 ?>
 
 <div>
   <!-- search box -->
-  <form>
-      <input type="text" wire:change="changeEvent($event.target.value)"/>
+  <form wire:submit="submit">
+      <input type="text" wire:model.live="inputValue" />
 
-      <button @click="alert('hi')">Submit</button>
-      <div x-on:click="alert('Hello World!')">hi</div>
+      <button>Submit</button>
   </form>
 
   <!-- movie lists loop -->
