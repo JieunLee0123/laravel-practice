@@ -14,7 +14,7 @@ class MovieListCard extends Component
         $this->movieDataArr = $movieDataArr;
         $this->tag = $tag;
     }
-    
+
     public function render()
     {
         return view('livewire.components/movie-list-card');
