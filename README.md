@@ -69,7 +69,9 @@ php artisan livewire-charts:install<br/>
 
 ## 트러블 슈팅
 1. object 는 component 로 pass 불가 => array 로 변경 후 data 전달 가능<br/>
-2. volt - component 로써만 사용가능<br/>
+2. volt - component 로만 사용가능<br/>
+3. reactive props - 하위 컴포넌트로 업데이트된 데이터를 전달할 때,<br/>
+  [#[Reactive]](https://livewire.laravel.com/docs/nesting#reactive-props) 를 사용하면 된다고 나와있지만, 작동하지 않음.<br/> [key="{{ Str::random() }}"](https://github.com/livewire/livewire/discussions/2097)을 적용하여 해결함.
 
 <br/>
 

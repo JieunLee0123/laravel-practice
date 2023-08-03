@@ -86,6 +86,6 @@ $onClickBtn = function($BtnTargetValue){
   </div>
 
   @foreach($movieListsArr as $movieDataArr)
-    <livewire:movie-list-card key="{{ now() }}" :movieDataArr="$movieDataArr" :tag="$tag" />
+    <livewire:movie-list-card key="{{ Str::random() }}" :$movieDataArr :$tag />
   @endforeach
 </section>
