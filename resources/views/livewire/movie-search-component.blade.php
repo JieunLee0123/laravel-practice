@@ -10,7 +10,7 @@
   @foreach($movieSearchArr as $movieDataArr)
     @dump($movieDataArr)
     <div class="bg-white w-full shadow rounded-lg mt-3 p-6 cursor-pointer">
-      <a href="/detail/{{ $movieDataArr['id'] }}">
+      <a href="/detail/{{ $movieDataArr['id'] }}" wire:navigation.prefetch >
         <div class="md:flex items-center">
             <div class="w-[20%] bg-yellow-50 rounded flex flex-shrink-0 items-center justify-center">
                 <img src="https://image.tmdb.org/t/p/w500/{{ $movieDataArr['poster_path'] }}" alt="hexa-logo" tabindex="0" class="focus:outline-none w-full h-full" />

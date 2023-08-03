@@ -2,6 +2,7 @@
 
 namespace App\Livewire;
 
+// use Livewire\Attributes\Reactive;
 use Livewire\Component;
 
 class MovieListCard extends Component
@@ -9,7 +10,7 @@ class MovieListCard extends Component
     public array $movieDataArr;
     public string $tag;
 
-    public function mount($movieDataArr = null, $tag=null)
+    public function mount($movieDataArr = null, $tag = null)
     {
         $this->movieDataArr = $movieDataArr;
         $this->tag = $tag;

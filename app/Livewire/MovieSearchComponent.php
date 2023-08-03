@@ -8,7 +8,6 @@ use Illuminate\Http\Client\Response;
 
 class MovieSearchComponent extends Component
 {
-    /** @modelable */
     public string $inputValue;
 
     public array $movieSearchArr;
