@@ -85,6 +85,7 @@ php artisan livewire-charts:install<br/>
 [livewire3 Components](https://livewire.laravel.com/docs/components)<br/>
 [Volt](https://livewire.laravel.com/docs/volt)<br/>
 [Charts in Livewire 3 & Volt & folio](https://nunomaduro.com/charts_in_livewire_3_and_volt)<br/>
+[Inline components](https://livewire.laravel.com/docs/components#inline-components) - 작은 component 만들 때 유용함<br/>
 
 [Xdebug]<br/>
 [Setup Xdebug WITH DOCKER and debug in VSCode](https://www.youtube.com/watch?v=it7JQKPfWTU)<br/>
